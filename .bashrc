@@ -22,7 +22,10 @@ if [ -f /opt/local/etc/bash_completion ]; then
   . /opt/local/etc/bash_completion
 fi
 
-PS1='\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+GREEN="\[\033[38;5;112m\]"
+PURPLE="\[\033[38;5;139m\]"
+FG="\[\033[00m\]"
+PS1="[$GREEN\w$FG]$PURPLE\$(__git_ps1)$FG$ "
 
 alias ls='ls -G'
 
@@ -35,6 +38,7 @@ alias gc='git commit -m '
 alias gm='git merge'
 alias b='bundle exec'
 alias tmux='TERM=screen-256color-bce tmux'
+export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
 
 set -o vi
 eval "$(rbenv init -)"
