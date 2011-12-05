@@ -13,6 +13,9 @@ git config --global color.status auto
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
    . /usr/local/git/contrib/completion/git-completion.bash
 fi
+if [ -f /usr/share/git/completion/git-completion.bash ]; then
+   . /usr/share/git/completion/git-completion.bash
+fi
 GIT_PS1_SHOWDIRTYSTATE=true
 
 if [ -f /opt/local/etc/bash_completion ]; then
