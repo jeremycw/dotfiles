@@ -20,6 +20,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rails'
 Bundle 'ervandew/supertab'
 Bundle 'jeremycw/darkspectrum'
+Bundle 'kchmck/vim-coffee-script'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
@@ -31,9 +32,14 @@ Bundle 'FuzzyFinder'
 
 filetype plugin indent on     " required! 
 
+set backupdir=~/.vim/tmp,.
+set directory=~/.vim/tmp,.
+
 set expandtab
 set ts=2 sts=2 sw=2
+set cc=80
 set hidden
 set number
+set ruler
 let mapleader = ","
 color darkspectrum
