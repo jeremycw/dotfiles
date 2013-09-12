@@ -20,12 +20,20 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rails'
 Bundle 'ervandew/supertab'
 Bundle 'jeremycw/darkspectrum'
+Bundle 'jeremycw/rust.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'sickill/vim-monokai'
+Bundle 'godlygeek/tabular'
+Bundle 'mattn/emmet-vim'
+Bundle 'cakebaker/scss-syntax.vim'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'jade.vim'
+Bundle 'VimClojure'
+Bundle 'Align'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " ...
@@ -41,5 +49,7 @@ set cc=80
 set hidden
 set number
 set ruler
+set autoread
 let mapleader = ","
 color darkspectrum
+au BufRead,BufNewFile *.rabl setf ruby

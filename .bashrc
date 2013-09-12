@@ -2,7 +2,7 @@
 # ~/.bashrc
 #
 
-PATH=$PATH:$HOME/tools:$HOME/.rbenv/bin:$HOME/android-sdk-mac_x86/platform-tools:$HOME/android-sdk-mac_x86/tools:/usr/local/mysql/bin
+PATH=$HOME/.rbenv/bin:$PATH:$HOME/tools:$HOME/android-sdk-mac_x86/platform-tools:$HOME/android-sdk-mac_x86/tools:/usr/local/mysql/bin
 
 # Set git autocompletion and PS1 integration
 git config --global color.branch auto
@@ -38,8 +38,13 @@ alias gc='git commit -m '
 alias gm='git merge'
 alias b='bundle exec'
 alias tmux='TERM=screen-256color-bce tmux'
+alias far='find . -type f | xargs perl -pi -e'
+alias love="/Applications/love.app/Contents/MacOS/love"
 export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'
 
 set -o vi
 eval "$(rbenv init -)"
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
