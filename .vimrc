@@ -1,3 +1,4 @@
+set termguicolors
 syntax on
 
 set nocompatible               " be iMproved
@@ -5,40 +6,21 @@ filetype off                   " required!
 
 set background=dark
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call plug#begin('~/.local/share/nvim/plugged')
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+Plug 'tpope/vim-markdown'
+Plug 'kien/ctrlp.vim'
+Plug 'icymind/NeoSolarized'
+Plug 'rking/ag.vim'
 
-" My Bundles here:
-"
-" original repos on github
-"Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-markdown'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'sjl/tslime2.vim'
-Bundle 'jeremycw/gambit.vim'
-Bundle 'guns/vim-clojure-static'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'altercation/vim-colors-solarized'
-Plugin 'rking/ag.vim'
-"Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" vim-scripts repos
-" non github repos
-"Bundle 'git://git.wincent.com/command-t.git'
-" ...
+call plug#end()
 
 filetype plugin indent on     " required! 
 
 set backupdir=~/.vim/tmp,.
 set directory=~/.vim/tmp,.
 
+colorscheme NeoSolarized
 set expandtab
 set ts=2 sts=2 sw=2
 set cc=80
@@ -47,8 +29,6 @@ set number
 set ruler
 set autoread
 let mapleader = "\<Space>"
-color solarized
-au BufRead,BufNewFile *.rabl setf ruby
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.bundle/*,*.ogg,*.png,*.jpg,*.mp3,.deps/*
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard | egrep -v "(\\.png|\\.ogg|\\.mp3|\\.jpg|\\.coffee\\.html|\\.meta|\\.class|\\.prefab|\\.scene|\\.controller|\\.animation|\\.shader|\\.unity|\\.anim|\\.wav|\\.mat|\\.dll|\\.asset|Assets/Facebook|Assets/Plugins)"', 'find %s -type f']

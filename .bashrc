@@ -10,13 +10,12 @@ git config --global color.diff auto
 git config --global color.status auto
 
 # Set git autocompletion and PS1 integration
-. $HOME/.git-contrib/completion/git-completion.bash
-. $HOME/.git-contrib/completion/git-prompt.sh
+. /usr/local/Cellar/git/2.15.0/etc/bash_completion.d/git-completion.bash
+. /usr/local/Cellar/git/2.15.0/etc/bash_completion.d/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
-
-if [ -f /opt/local/etc/bash_completion ]; then
-  . /opt/local/etc/bash_completion
-fi
+#if [ -f /opt/local/etc/bash_completion ]; then
+#  . /opt/local/etc/bash_completion
+#fi
 
 GREEN="\[\033[38;5;112m\]"
 PURPLE="\[\033[38;5;139m\]"
