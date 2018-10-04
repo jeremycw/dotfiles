@@ -1,0 +1,14 @@
+let mapleader = " "
+
+nnoremap <Leader>t :action GotoClass<CR>
+
+nnoremap <Leader>s :action SplitHorizontally<CR>
+nnoremap <Leader>v :action SplitVertically<CR>
+nnoremap <Leader>h <C-W>h
+nnoremap <Leader>l <C-W>l
+nnoremap <Leader>j <C-W>j
+nnoremap <Leader>k <C-W>k
+nnoremap <Leader>e :Ex<CR>
+
+nnoremap <Leader>q :action CloseAllEditors<CR>
+nnoremap <Leader>w :w<CR>
