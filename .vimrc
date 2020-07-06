@@ -34,7 +34,7 @@ set autoread
 let mapleader = "\<Space>"
 
 let g:LanguageClient_serverCommands = {
-    \ 'c': ['clangd']
+    \ 'c': ['ccls']
     \ }
 
 " Copy current buffer path relative to root of VIM session to system clipboard
