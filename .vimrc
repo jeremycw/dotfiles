@@ -2,28 +2,26 @@ syntax on
 
 set nocompatible               " be iMproved
 
-set background=dark
+"set background=dark
 
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'tpope/vim-markdown'
-Plug 'icymind/NeoSolarized'
+Plug 'maxmx03/solarized.nvim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/vim-easy-align'
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neovim/nvim-lspconfig'
+
+au BufReadPost *.jbuilder set syntax=ruby
 
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 
-colorscheme NeoSolarized
+colorscheme solarized
 set expandtab
 set ts=2 sts=2 sw=2
 set cc=80
